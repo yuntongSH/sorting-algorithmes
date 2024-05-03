@@ -1,3 +1,18 @@
+"""
+
+Max-Heapify(A,i)
+    l = Left(i)
+    r = Right(i)
+    if l <= A.heap-size and A[l] > A[i]
+        largest = l
+    else largest = i
+    if r <= A.heap-size and A[r] > A[largest]
+        largest = r
+    if largest <> i
+        exchange A[i] with A[largest]
+        Max-Heapify(A.largest)
+        
+"""
 def parent(i):
     if i <= 0:
         print("Erreur pas de parent")
@@ -16,8 +31,10 @@ class heap:
         self.length = len(tab)
         self.v = tab
         self.heapsize = 0
+
     def __str__(self):
         return "lenth : {}, v : {}, heapsize : {}".format(self.length, self.v, self.heapsize)
+
     def show(self):
         print(self)
 
