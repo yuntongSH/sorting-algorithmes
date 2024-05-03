@@ -33,7 +33,7 @@ class heap:
         self.heapsize = 0
 
     def __str__(self):
-        return "lenth : {}, v : {}, heapsize : {}".format(self.length, self.v, self.heapsize)
+        return "length : {}, v : {}, heapsize : {}".format(self.length, self.v, self.heapsize)
 
     def show(self):
         print(self)
