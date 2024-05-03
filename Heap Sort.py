@@ -1,5 +1,5 @@
 """
-
+#Top-down
 Max-Heapify(A,i)
     l = Left(i)
     r = Right(i)
@@ -11,6 +11,12 @@ Max-Heapify(A,i)
     if largest <> i
         exchange A[i] with A[largest]
         Max-Heapify(A.largest)
+
+#Bottom-up
+Build-Max-Heap(A)
+    A.heap-size = A.length
+    for i = ⌊A.length/2⌋ down to 1
+        Max-Heapify(A,i)
         
 """
 def parent(i):
@@ -56,9 +62,11 @@ class heap:
         self.heapsize = self.length
         for i in range((self.length - 1)//2, -1, -1):
             self.MaxHeapify(i)
+            
     def Heapsort(self):
         self.BuildMaxHeap()
         for i in range(self.length-1, 0, -1):
             self.v[i], self.v[0] = self.v[0], self.v[i]
             self.heapsize -= 1
             self.MaxHeapify(0)
+            
