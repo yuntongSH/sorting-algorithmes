@@ -12,7 +12,7 @@ Max-Heapify(A,i)
         exchange A[i] with A[largest]
         Max-Heapify(A.largest)
 
-#Bottom-up approacg
+#Bottom-up approach
 Build-Max-Heap(A)
     A.heap-size = A.length
     for i = ⌊A.length/2⌋ down to 1
