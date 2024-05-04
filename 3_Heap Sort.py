@@ -1,5 +1,5 @@
 """
-#Top-down
+#Top-down approach
 Max-Heapify(A,i)
     l = Left(i)
     r = Right(i)
@@ -12,12 +12,19 @@ Max-Heapify(A,i)
         exchange A[i] with A[largest]
         Max-Heapify(A.largest)
 
-#Bottom-up
+#Bottom-up approacg
 Build-Max-Heap(A)
     A.heap-size = A.length
     for i = ⌊A.length/2⌋ down to 1
         Max-Heapify(A,i)
-        
+
+HeapSort(A)
+    Build-max-heap(A)
+    for i = A.length downto 2
+        exchange A[1] with A[i]
+        A.heapsize = A.heapsize - 1
+        Max-Heapify(A,1)
+      
 """
 def parent(i):
     if i <= 0:
